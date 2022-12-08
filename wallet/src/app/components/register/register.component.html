@@ -1,0 +1,98 @@
+
+
+<div class="mt-4">
+    <h2 class="text-dark text-center">Register wallet </h2>
+  </div>
+<div class="container" style="width: 200px;" >
+    <table>
+        <tr>
+            <td>User Id:</td>
+            <td><input type="text" [(ngModel)]="newWallet.id"  name="walletId" #id="ngModel" required></td>
+        </tr>
+        
+        <tr>
+            <td>User Name:</td>
+            <td><input type="text" [(ngModel)]="newWallet.name"  name="walletname" #name="ngModel" required></td>
+        </tr>
+        
+        <tr>
+            <td>Balance:</td>
+            <td><input type="number" [(ngModel)]="newWallet.balance" name="walletbalance" #blc="ngModel" required></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" [(ngModel)]="newWallet.pswd" name="walletPassword" #psw="ngModel" required></td>
+        </tr>
+        
+   
+                <tr class="text-center" >
+                    <td colspan="2" > 
+                        <input class="btn btn-success ml-5 " (click)="addUser()"type="button" value ="Register"></td>
+                 </tr>
+              
+     
+    </table>
+</div>
+
+
+<!--
+<h1>REGISTRATION</h1>
+<form autocomplete="on" ngNativeValidate>
+    <table>
+        <tr>
+            <td>WALLET Id:</td>
+            <td><input type="text" [(ngModel)]="newWallet.id" id="walletid" pattern="[0-9]"
+                    title="Min 1  and max 5 digits expected for id." name="walletid" required></td>
+        </tr>
+
+        <tr>
+            <td>Model Name:</td>
+            <td><input type="text" [(ngModel)]="newWallet.name" name="walletname" pattern="[A-Za-z]{3,30}"
+                    title="Min 3  and max 30 chars[no special chars] expected for name." required></td>
+        </tr>
+
+        <tr>
+            <td>Wallet Balance:</td>
+            <td><input type="number" [(ngModel)]="newWallet.balance" name="walletbalance"
+                title="min 500 " required></td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" [(ngModel)]="newWallet.pswd" name="walletPassword" required></td>
+        </tr>
+        <tr><input type="submit" class="btn btn-success" (click)="addUser()" value="REGISTER"></tr>
+    </table>
+</form>
+
+<table>
+    <tr>
+        <td>User Id:</td>
+        <td><input type="text" [(ngModel)]="newWallet.id" name="userid" class="form-control"  #name="ngModel" required></td>
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"  class="alert">
+              <p *ngIf="name.errors?.['required']" class="text-danger">
+                 Id is required.
+               </p>
+              
+
+
+    <tr>
+        <td>Wallet Id:</td>
+        <td><input type="text"  [(ngModel)] = "newWallet.id" name="walletid"></td>
+    </tr>
+
+    <tr>
+        <td>Model Name:</td>
+        <td><input type="text" [(ngModel)] = "newWallet.name" name="walletname"></td>
+    </tr>
+    <tr>
+        <td>Balance:</td>
+        <td><input type="number" [(ngModel)] = "newWallet.balance" name="walletbalance"></td>
+    </tr>
+    <tr>
+        <td>password:</td>
+        <td><input type="password" [(ngModel)] = "newWallet.pswd" name="walletpswd"></td>
+    </tr>
+    <tr><input type="button" (click)="addUser()" value ="Add"></tr>
+</div>
+    </table>-->

@@ -1,0 +1,30 @@
+<p>updation works!</p>
+
+<table>
+    <h2 class="text-dark text-center">UPDATE YOUR WALLET DETAILS</h2>
+    <div *ngFor='let ww of this.newWallet'>
+        <div *ngIf='ww.id == this.logid'>
+                  
+    <tr>
+        <td>Wallet Id:</td>
+        <td><input type="text"  [(ngModel)] = "ww.id" name="walletid" ></td>
+    </tr>
+
+    <tr>
+        <td>Model Name:</td>
+        <td><input type="text" [(ngModel)] = "ww.name" name="walletname"></td>
+    </tr>
+    <tr>
+        <td>Balance:</td>
+        <td><input type="number" [(ngModel)] = "ww.balance" name="walletbalance"></td>
+    </tr>
+    <tr>
+        <td>password:</td>
+        <td><input type="password" [(ngModel)] = "ww.pswd" name="walletpswd"></td>
+    </tr>
+
+    <tr><input type="button" (click)="update(ww)" value="update"></tr>
+        </div>
+    
+</div>
+</table>

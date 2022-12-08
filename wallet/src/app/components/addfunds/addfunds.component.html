@@ -1,0 +1,36 @@
+<p>addfunds works!</p>
+
+<table>
+    <h2 class="text-dark text-center">ADD FUNDS TO YOUR ACCOUNTS </h2>
+    <div *ngFor='let items of this.walletList'>
+        <div *ngIf='items.id == this.walletId '>
+
+            <tr>
+                <td>Model ID:</td>
+                <td><input type="number" [(ngModel)] = "items.id" name="walletId" disabled></td>
+            </tr>
+            <tr>
+                <td>Model Name:</td>
+                <td><input type="text" [(ngModel)] = "items.name" name="walletname" disabled></td>
+            </tr>
+
+            <tr>
+                <td>Available balance:</td>
+                <td>
+                    {{items.balance}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>Add amount:</td>
+                <td><input type="number" [(ngModel)] = "items.addamt" name="addfunds"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type='button' (click)="addAmtFunds(items)" value="add Amount">
+                </td>
+            </tr>
+        </div>
+    </div>
+</table>

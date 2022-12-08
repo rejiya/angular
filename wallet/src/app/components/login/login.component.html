@@ -1,0 +1,23 @@
+
+<div class="mt-4">
+  <h2 class="text-dark text-center">LOGIN TO YOUR ACCOUNT </h2>
+  </div>
+  <div class="container" style="width: 200px;" >
+    <table>
+        <tr>
+            <td>User Id:</td>
+            <td><input type="number" [(ngModel)]="loginDetails.id"  name="walletId" #id="ngModel" required></td>
+        </tr>
+        
+        <tr>
+            <td>User Password:</td>
+            <td><input type="text" [(ngModel)]="loginDetails.pswd"  name="walletPassword" #name="ngModel" required></td>
+        </tr>
+        <tr class="text-center" >
+          <td colspan="2" > <input class="btn btn-success ml-5 " (click)="login()"type="button" value ="Login"></td>
+          </tr>
+  <div *ngIf='this.islogin'>
+    <div class="alert alert-success">
+      <strong>login Success!</strong> 
+    </div>
+    </div>

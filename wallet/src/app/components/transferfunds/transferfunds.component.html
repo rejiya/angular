@@ -1,0 +1,41 @@
+<p>transferfunds works!</p>
+
+<h2 class="text-dark text-center">SELECT ACCOUNT TO TRANSFER FUNDS</h2>
+<table class="table table-striped" >
+        <tr>
+            <th>ID</th>
+            <th>MODEL NAME</th>
+            <th>BALANCE</th>
+        </tr>
+
+
+
+        <div *ngFor='let items of this.walletList'>
+
+            <tr *ngIf='items.id != this.walletId'>
+        
+                <td> {{items.id}}</td>
+                <td> {{items.name}}</td>
+                <td> {{items.balance}}</td>
+
+                <td><input type='button' (click)="transfer(items)" value="send"></td>
+
+
+            </tr>
+        </div>
+   
+</table>
+
+
+<div *ngIf='isTransfer'>
+
+    <h6>Transfer amount:</h6>
+    <form>
+        Id: <input type="text" [(ngModel)]="transWall .id" name="id" disabled><br>
+        Name:<input type="text" [(ngModel)]="transWall.name" name="name" disabled><br>
+        BALANCE:<input type="number" [(ngModel)]="transWall.balance" name="balance" disabled>
+        Add BALANCE:<input type="number" [(ngModel)]="transWall.transferamt" name="addamt">
+        <input type="button" (click)="transferAmt()" value="Update">
+    </form>
+
+</div>

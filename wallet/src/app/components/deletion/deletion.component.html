@@ -1,0 +1,26 @@
+<p>deletion works!</p>
+<table>
+    <h2 class="text-dark text-center">REMOVE ACCOUNT </h2>
+    <div *ngFor='let wallet of this.newWallet'>
+        <div *ngIf='wallet.id == this.logid'>
+    <tr>
+        <td>Wallet Id:</td>
+        <td><input type="text"  [(ngModel)] = "wallet.id" name="walletid"></td>
+    </tr>
+
+    <tr>
+        <td>Model Name:</td>
+        <td><input type="text" [(ngModel)] = "wallet.name" name="walletname"></td>
+    </tr>
+    <tr>
+        <td>Balance:</td>
+        <td><input type="number" [(ngModel)] = "wallet.balance" name="walletbalance"></td>
+    </tr>
+    <tr>
+        <td>password:</td>
+        <td><input type="password" [(ngModel)] = "wallet.pswd" name="walletpswd"></td>
+    </tr>
+
+    <tr><input type="button" (click)="delete(wallet)" value="deletion" ></tr>
+</div></div>
+</table>
